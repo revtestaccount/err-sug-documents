@@ -143,6 +143,26 @@
                                         
 
 
+                                        <div class="card" data-ng-repeat="document in data.cards track by $index"
+                                            style="font-size: 1.2rem; margin-bottom: 1rem;">
+                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-4 col-xxs-4">
+                                                <a data-ng-href="{{document.link}}" target="_blank"
+                                                    data-ng-click="vm.sendData([document.category, document.description])">Link
+                                                    to document</a>
+                                                <sup data-ng-if="document.explainer">
+                                                    demo
+                                                </sup>
+                                            </div>
+                                            <a name="{{document.anchor}}"> </a>
+                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-xxs-2">Time
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-xxs-3"
+                                                style="padding: 0rem !important;">date</div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 col-xxs-3"
+                                                style="padding left: 0rem !important;">other info
+                                            </div>
+                                        </div>
+                                     
 
                                         <div data-ng-repeat="document in data.cards track by $index">
                                             <div class="col-sm-12" style="padding-left: 0rem !important" ;
